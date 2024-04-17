@@ -11,3 +11,7 @@
 #autoupdate_system.sh - simple bash script to update server OS, FluxOS and postpone reboot (if needed after updates) if node is not in maintenance window or queue window Using Crontab for autoupdates. Full credit to mike8643 = https://github.com/mike8643/fluxnode---system-auto-update
 
 `wget https://raw.githubusercontent.com/mike8643/fluxnode---system-auto-update/main/autoupdate_system.sh && chmod +x autoupdate_system.sh && mkdir crontab_logs && touch crontab_logs/autouptade_os.log && crontab -l | sed "\$a0 23 * * * /home/$USER/autoupdate_system.sh >> /home/$USER/crontab_logs/autouptade_os.log 2>&1" | crontab -`
+
+#remove crontab
+`crontab -l | grep -v "/bin/bash /home/fluxadmin/checkdb.sh" | crontab -
+`
