@@ -1,4 +1,4 @@
-# Flux Toolkit by BMO
+# Flux Toolkit
 Repository for Flux specific tools to improve overall stability of the nodes.
 
 **#checkdb.sh** - checks if db is running, if not reboots the host. Loop every 10 minutes
